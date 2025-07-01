@@ -1,0 +1,11 @@
+<h1>Internal Task Tracker</h1>
+
+<input [(ngModel)]="newTitle" placeholder="Task Title" />
+<input [(ngModel)]="assignedTo" placeholder="Assign To" />
+<button (click)="addTask()">Add Task</button>
+
+<ul>
+  <li *ngFor="let task of tasks">
+    {{ task.title }} - {{ task.assignedTo }} ({{ task.status }})
+  </li>
+</ul>
